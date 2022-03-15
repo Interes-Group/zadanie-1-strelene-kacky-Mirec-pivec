@@ -11,6 +11,6 @@ public class Kacka extends Karta {
 
     @Override
     public void vypisMenoKarty() {
-        System.out.println(meno);
+        System.out.println("Tato karta sa vola " + meno);
     }
 }

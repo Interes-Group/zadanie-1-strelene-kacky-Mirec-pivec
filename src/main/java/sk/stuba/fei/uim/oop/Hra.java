@@ -10,6 +10,12 @@ public class Hra {
             hraci[i] = new Hrac();
             hraci[i].vypisHraca();
         }
-        Karta test = new Kacka();
+        Karta[] test = new Karta[2];
+        test[0] = new Kacka();
+        test[1] = new Voda();
+
+        for (int i = 0; i < test.length; i++){
+            test[i].vypisMenoKarty();
+        }
     }
 }
