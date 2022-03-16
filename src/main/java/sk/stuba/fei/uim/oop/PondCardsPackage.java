@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.oop.PondCards;
+package sk.stuba.fei.uim.oop;
 
 import sk.stuba.fei.uim.oop.Player;
 import sk.stuba.fei.uim.oop.PondCards.DuckCard;

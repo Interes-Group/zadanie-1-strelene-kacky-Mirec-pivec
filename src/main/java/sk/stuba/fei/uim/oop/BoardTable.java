@@ -1,7 +1,6 @@
 package sk.stuba.fei.uim.oop;
 
 import sk.stuba.fei.uim.oop.PondCards.PondCard;
-import sk.stuba.fei.uim.oop.PondCards.PondCardsPackage;
 
 import java.util.ArrayList;
 
@@ -13,6 +12,7 @@ public class BoardTable {
     public BoardTable(){
 
     }
+
 
     public void initializePondPlaces(PondCardsPackage pondPackage){
         for (int counter = 0; counter < 6; counter++) {

@@ -1,7 +1,5 @@
 package sk.stuba.fei.uim.oop;
 
-import sk.stuba.fei.uim.oop.PondCards.PondCardsPackage;
-
 import java.util.Collections;
 
 public class Game {
