@@ -2,17 +2,17 @@ package sk.stuba.fei.uim.oop;
 
 import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 
-public class Hrac {
+public class Player {
     private String meno;
     private int zivoty;
 
-    public Hrac(){
+    public Player(){
         meno = ZKlavesnice.readString("zadaj meno hraca");
         zivoty = 5;
     }
 
-    public Hrac generujHraca(){
-        return new Hrac();
+    public Player generujHraca(){
+        return new Player();
     }
 
     public void vypisHraca(){

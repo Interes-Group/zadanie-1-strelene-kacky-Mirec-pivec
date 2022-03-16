@@ -1,11 +1,11 @@
 package sk.stuba.fei.uim.oop;
 
-public class Kacka extends KartaJazera {
+public class Kacka extends PondCard {
     private String meno = "Kacka";
     private String vlastnik;
 
 
-   public Kacka(Hrac hrac){
+   public Kacka(Player hrac){
        vlastnik = hrac.getMeno();
    }
 
