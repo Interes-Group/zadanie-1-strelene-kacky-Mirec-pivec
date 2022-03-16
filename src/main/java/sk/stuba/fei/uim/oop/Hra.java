@@ -3,19 +3,18 @@ package sk.stuba.fei.uim.oop;
 import java.util.ArrayList;
 
 public class Hra {
+    private Hrac[] players;
+
 
     public Hra(){
-        Hrac[] hraci = new Hrac[5];
-        for(int i =0; i < 5; i++){
+        System.out.println("Welcom to duck my Duck hunt game! Hope you will like it <3");
+        System.out.println("Now is time to choose players: ");
+        Hrac[] hraci = new Hrac[3];
+        for(int i =0; i < hraci.length; i++){
             hraci[i] = new Hrac();
-            hraci[i].vypisHraca();
         }
-        Karta[] test = new Karta[2];
-        test[0] = new Kacka();
-        test[1] = new Voda();
+        BalicekPreJazierko balicekJazierka = new BalicekPreJazierko();
+        balicekJazierka.naplnBalicek(hraci);
 
-        for (int i = 0; i < test.length; i++){
-            test[i].vypisMenoKarty();
-        }
     }
 }

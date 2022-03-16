@@ -1,9 +1,9 @@
 package sk.stuba.fei.uim.oop;
 
-public abstract class Karta {
+public abstract class KartaJazera {
     protected String meno;
 
-    public Karta(){
+    public KartaJazera(){
     }
 
     public abstract void vypisMenoKarty();
