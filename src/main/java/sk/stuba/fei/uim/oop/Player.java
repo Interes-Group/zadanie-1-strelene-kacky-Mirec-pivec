@@ -16,7 +16,7 @@ public class Player {
         System.out.println("has " + lives + " lives left");
     }
 
-    public String getMeno() {
+    public String getName() {
         return name;
     }
 

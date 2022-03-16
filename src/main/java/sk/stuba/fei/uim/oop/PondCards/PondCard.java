@@ -1,4 +1,4 @@
-package sk.stuba.fei.uim.oop;
+package sk.stuba.fei.uim.oop.PondCards;
 
 public abstract class PondCard {
     protected String name;
@@ -6,7 +6,7 @@ public abstract class PondCard {
     public PondCard(){
     }
 
-    public abstract void printCardName();
+    public abstract String printCard();
 
 
 }

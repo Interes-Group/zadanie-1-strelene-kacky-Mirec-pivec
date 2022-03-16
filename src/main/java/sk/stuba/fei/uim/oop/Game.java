@@ -1,11 +1,13 @@
 package sk.stuba.fei.uim.oop;
 
-import java.util.ArrayList;
+import sk.stuba.fei.uim.oop.PondCards.PondCardsPackage;
+
 import java.util.Collections;
 
 public class Game {
     private Player[] players;
     private PondCardsPackage pondPackage = new PondCardsPackage();
+    private BoardTable board = new BoardTable();
 
 
 
@@ -19,6 +21,11 @@ public class Game {
         System.out.println("len aby to tu zastalo");
         pondPackage.generatePackage(players);
         Collections.shuffle(this.pondPackage.getCardsPackage());
+        board.initializePondPlaces(pondPackage);
+        board.printBoard();
+
+
+
 
 
 
