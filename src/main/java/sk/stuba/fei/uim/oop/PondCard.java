@@ -1,7 +1,7 @@
 package sk.stuba.fei.uim.oop;
 
 public abstract class PondCard {
-    protected String meno;
+    protected String name;
 
     public PondCard(){
     }

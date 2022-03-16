@@ -6,7 +6,7 @@ public class WaterCard extends PondCard {
 
     @Override
     public void printCardName() {
-        System.out.println("Tato karta sa vola " + meno);
+        System.out.println("this cards name is " + meno);
         //System.out.println("test ci ide aj pozicia vody keby som potreboval" + pozicia);
     }
 }

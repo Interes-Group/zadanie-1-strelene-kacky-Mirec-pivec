@@ -3,24 +3,24 @@ package sk.stuba.fei.uim.oop;
 import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 
 public class Player {
-    private String meno;
-    private int zivoty;
+    private String name;
+    private int lives;
 
     public Player(){
-        meno = ZKlavesnice.readString("zadaj meno hraca");
-        zivoty = 5;
+        name = ZKlavesnice.readString("input player's name please");
+        lives = 5;
     }
 
-    public Player generujHraca(){
-        return new Player();
-    }
-
-    public void vypisHraca(){
-        System.out.println("hrac sa vola" + meno);
-        System.out.println("ma pocet zivotov " + zivoty);
+    public void printPlayersState(){
+        System.out.println("players name " + name);
+        System.out.println("has " + lives + " lives left");
     }
 
     public String getMeno() {
-        return meno;
+        return name;
+    }
+
+    public void duckShot(){
+        lives--;
     }
 }
