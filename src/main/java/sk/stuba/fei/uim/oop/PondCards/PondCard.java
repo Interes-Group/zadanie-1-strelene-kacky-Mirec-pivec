@@ -6,7 +6,7 @@ public abstract class PondCard {
     public PondCard(){
     }
 
-    public abstract String printCard();
+    public abstract String printPondCard();
 
 
 }

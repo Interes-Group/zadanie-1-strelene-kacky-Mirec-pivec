@@ -7,4 +7,8 @@ public abstract class ActionCard {
     }
 
     public abstract void action(BoardTable board);
+
+    public abstract boolean canBePlayed(BoardTable board);
+
+    public abstract String getName();
 }

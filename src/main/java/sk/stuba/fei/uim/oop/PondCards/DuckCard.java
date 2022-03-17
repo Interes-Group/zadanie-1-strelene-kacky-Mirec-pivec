@@ -18,7 +18,7 @@ public class DuckCard extends PondCard {
     }
 
     @Override
-    public String printCard() {
+    public String printPondCard() {
         return (name + " of " + this.owner);
     }
 

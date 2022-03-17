@@ -1,6 +1,11 @@
 package sk.stuba.fei.uim.oop;
 
+import sk.stuba.fei.uim.oop.PondCards.PondCard;
+
+import javax.swing.*;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class Game {
     private Player[] players;
@@ -20,7 +25,14 @@ public class Game {
         pondPackage.generatePackage(players);
         Collections.shuffle(this.pondPackage.getCardsPackage());
         board.initializePondPlaces(pondPackage);
+//        players[0].useCard(0,board);
         board.printBoard();
+        System.out.println("---------------------------------");
+        board.printBoard();
+
+//        players[1].useCard(0, board);
+//        board.printBoard();
+
 
 
 

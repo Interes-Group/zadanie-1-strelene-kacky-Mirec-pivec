@@ -10,7 +10,7 @@ public class WaterCard extends PondCard {
     }
 
     @Override
-    public String printCard() {
+    public String printPondCard() {
         return getName();
     }
 }

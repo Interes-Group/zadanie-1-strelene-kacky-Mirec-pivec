@@ -22,8 +22,17 @@ public class BoardTable {
     }
 
     public void printBoard(){
-        for (int place = 0; place < 6; place++) {
-            System.out.println((place + 1) + ". " + aimPlaces[place] + " - " + pondPlaces.get(place).printCard());
+        for (int place = 0; place < aimPlaces.length; place++) {
+            System.out.println((place + 1) + ". " + aimPlaces[place] + " - " + pondPlaces.get(place).printPondCard());
         }
+    }
+
+    public boolean isAllAimed(){
+        for (int place = 0; place < aimPlaces.length; place++) {
+            if (aimPlaces[place].equals("Not aimed at")){
+                return false;
+            }
+        }
+        return true;
     }
 }

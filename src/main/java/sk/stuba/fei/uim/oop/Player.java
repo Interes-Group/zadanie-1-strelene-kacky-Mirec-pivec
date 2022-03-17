@@ -2,10 +2,13 @@ package sk.stuba.fei.uim.oop;
 
 import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 
+import java.util.*;
+
 public class Player {
     private String name;
     private int lives;
-    private ActionCard[] cards = new ActionCard[3];
+    private List<ActionCard> cards = new ArrayList<ActionCard>(3);
+
 
     public Player(){
         name = ZKlavesnice.readString("input player's name please");
@@ -14,9 +17,12 @@ public class Player {
     }
 
     public void generateCards(){
-        for (int i = 0; i < 3 ; i++) {
-            cards[i] = new AimCard();
+        for (int i = 0; i < 2 ; i++) {
+            AimCard aim = new AimCard();
+            cards.add(aim);
         }
+        DuckMarchCard duckMarch = new DuckMarchCard();
+        cards.add(duckMarch);
     }
 
     public void printPlayersState(){
@@ -32,7 +38,11 @@ public class Player {
         lives--;
     }
 
-    public void useCard(ActionCard card, BoardTable board){
-        card.action(board);
+    public void useCard(int indexOfCard, BoardTable board){
+        cards.get(indexOfCard).action(board);
+        System.out.println(this.name + " used card " + cards.get(indexOfCard).getName());
+        //tu potom vymazat kartu cez remove
     }
+
+
 }
