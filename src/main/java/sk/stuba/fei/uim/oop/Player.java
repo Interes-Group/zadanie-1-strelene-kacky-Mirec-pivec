@@ -17,12 +17,14 @@ public class Player {
     }
 
     public void generateCards(){
-        for (int i = 0; i < 2 ; i++) {
+        for (int i = 0; i < 1 ; i++) {
             AimCard aim = new AimCard();
             cards.add(aim);
         }
         DuckMarchCard duckMarch = new DuckMarchCard();
         cards.add(duckMarch);
+        Scatter scatter = new Scatter();
+        cards.add(scatter);
     }
 
     public void printPlayersState(){

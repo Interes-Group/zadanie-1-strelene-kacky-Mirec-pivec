@@ -25,8 +25,8 @@ public class Game {
         pondPackage.generatePackage(players);
         Collections.shuffle(this.pondPackage.getCardsPackage());
         board.initializePondPlaces(pondPackage);
-//        players[0].useCard(0,board);
         board.printBoard();
+        players[0].useCard(2,board);
         System.out.println("---------------------------------");
         board.printBoard();
 
