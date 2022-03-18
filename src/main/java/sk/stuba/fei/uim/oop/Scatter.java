@@ -11,12 +11,12 @@ public class Scatter extends ActionCard{
     }
 
     @Override
-    public boolean canBePlayed(BoardTable board) {
+    public boolean canBePlayed(GameTable table) {
         return true;
     }
 
     @Override
-    public void action(BoardTable board) {
-        Collections.shuffle(board.pondPlaces);
+    public void action(GameTable table) {
+        Collections.shuffle(table.getBoard().pondPlaces);
     }
 }

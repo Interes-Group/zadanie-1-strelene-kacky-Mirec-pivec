@@ -6,9 +6,9 @@ public abstract class ActionCard {
 
     }
 
-    public abstract void action(BoardTable board);
+    public abstract void action(GameTable table);
 
-    public abstract boolean canBePlayed(BoardTable board);
+    public abstract boolean canBePlayed(GameTable table);
 
     public abstract String getName();
 }

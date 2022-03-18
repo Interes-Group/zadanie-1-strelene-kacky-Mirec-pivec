@@ -25,7 +25,19 @@ public class PondCardsPackage {
         }
     }
 
+    public void addCardsFromPond(GameTable table){
+        this.cardsPackage.addAll(table.getBoard().pondPlaces);
+    }
+
     public ArrayList<PondCard> getCardsPackage() {
         return cardsPackage;
+    }
+
+    public PondCard cardOnTop(){
+        return cardsPackage.get(cardsPackage.size() - 1);
+    }
+
+    public void removeCardOnTop(){
+        cardsPackage.remove(cardsPackage.size() - 1);
     }
 }

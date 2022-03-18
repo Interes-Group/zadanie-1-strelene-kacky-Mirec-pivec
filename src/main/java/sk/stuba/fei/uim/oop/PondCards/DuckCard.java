@@ -13,6 +13,18 @@ public class DuckCard extends PondCard {
 
    }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
     public String getOwner() {
         return owner;
     }

@@ -5,12 +5,12 @@ public class WaterCard extends PondCard {
     //public int pozicia = 1;
 
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
 
     @Override
     public String printPondCard() {
-        return getName();
+        return name;
     }
 }

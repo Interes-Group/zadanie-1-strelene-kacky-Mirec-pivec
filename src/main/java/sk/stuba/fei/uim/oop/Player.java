@@ -16,6 +16,10 @@ public class Player {
         this.generateCards();
     }
 
+    public List<ActionCard> getCards() {
+        return cards;
+    }
+
     public void generateCards(){
         for (int i = 0; i < 1 ; i++) {
             AimCard aim = new AimCard();
@@ -23,8 +27,8 @@ public class Player {
         }
         DuckMarchCard duckMarch = new DuckMarchCard();
         cards.add(duckMarch);
-        Scatter scatter = new Scatter();
-        cards.add(scatter);
+        DuckDanceCard duckDanceCard = new DuckDanceCard();
+        cards.add(duckDanceCard);
     }
 
     public void printPlayersState(){
@@ -40,10 +44,11 @@ public class Player {
         lives--;
     }
 
-    public void useCard(int indexOfCard, BoardTable board){
-        cards.get(indexOfCard).action(board);
+    public void useCard(int indexOfCard,GameTable table){
+        cards.get(indexOfCard).action(table);
         System.out.println(this.name + " used card " + cards.get(indexOfCard).getName());
         //tu potom vymazat kartu cez remove
+        // asi budem musiet passovat aj hracov
     }
 
 

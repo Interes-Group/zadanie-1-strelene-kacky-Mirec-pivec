@@ -4,12 +4,13 @@ import sk.stuba.fei.uim.oop.PondCards.PondCard;
 
 import java.util.ArrayList;
 
-public class BoardTable {
+//neinicializovať takto priamo
+public class Pond {
     public ArrayList<PondCard> pondPlaces = new ArrayList<>();
     public String[] aimPlaces = {"Not aimed at", "Not aimed at", "Not aimed at",
             "Not aimed at", "Not aimed at", "Not aimed at"};
 
-    public BoardTable(){
+    public Pond(){
 
     }
 
