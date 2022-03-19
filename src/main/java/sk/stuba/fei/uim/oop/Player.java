@@ -1,5 +1,9 @@
 package sk.stuba.fei.uim.oop;
 
+import sk.stuba.fei.uim.oop.ActionCards.ActionCard;
+import sk.stuba.fei.uim.oop.ActionCards.AimCard;
+import sk.stuba.fei.uim.oop.ActionCards.DuckMarchCard;
+import sk.stuba.fei.uim.oop.ActionCards.TurboDuck;
 import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 
 import java.util.*;
@@ -7,7 +11,7 @@ import java.util.*;
 public class Player {
     private String name;
     private int lives;
-    private List<ActionCard> cards ;
+    private ArrayList<ActionCard> cards ;
 
 
     public Player(){
@@ -17,8 +21,8 @@ public class Player {
         this.generateCards();
     }
 
-    public List<ActionCard> getCards() {
-        return cards;
+    public ArrayList<ActionCard> getCards() {
+        return this.cards;
     }
 
     private void generateCards(){

@@ -1,8 +1,9 @@
-package sk.stuba.fei.uim.oop;
+package sk.stuba.fei.uim.oop.ActionCards;
 
+import sk.stuba.fei.uim.oop.GameTable;
 import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 
-public class ShootCard extends ActionCard{
+public class ShootCard extends ActionCard {
 
     @Override
     public void action(GameTable table) {

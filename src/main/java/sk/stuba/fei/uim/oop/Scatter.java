@@ -1,8 +1,10 @@
 package sk.stuba.fei.uim.oop;
 
+import sk.stuba.fei.uim.oop.ActionCards.ActionCard;
+
 import java.util.Collections;
 
-public class Scatter extends ActionCard{
+public class Scatter extends ActionCard {
     private String name = "Scatter card";
 
     @Override

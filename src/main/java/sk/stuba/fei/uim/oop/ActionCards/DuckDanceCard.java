@@ -1,8 +1,10 @@
-package sk.stuba.fei.uim.oop;
+package sk.stuba.fei.uim.oop.ActionCards;
+
+import sk.stuba.fei.uim.oop.GameTable;
 
 import java.util.Collections;
 
-public class DuckDanceCard extends ActionCard{
+public class DuckDanceCard extends ActionCard {
     private final String name;
 
     public DuckDanceCard(){

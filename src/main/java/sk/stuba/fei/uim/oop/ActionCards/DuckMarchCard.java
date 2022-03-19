@@ -1,5 +1,6 @@
-package sk.stuba.fei.uim.oop;
+package sk.stuba.fei.uim.oop.ActionCards;
 
+import sk.stuba.fei.uim.oop.GameTable;
 import sk.stuba.fei.uim.oop.PondCards.PondCard;
 
 public class DuckMarchCard extends ActionCard {
