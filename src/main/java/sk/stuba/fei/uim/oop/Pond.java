@@ -4,14 +4,14 @@ import sk.stuba.fei.uim.oop.PondCards.PondCard;
 
 import java.util.ArrayList;
 
-//neinicializovať takto priamo
 public class Pond {
-    public ArrayList<PondCard> pondPlaces = new ArrayList<>();
-    public String[] aimPlaces = {"Not aimed at", "Not aimed at", "Not aimed at",
-            "Not aimed at", "Not aimed at", "Not aimed at"};
+    public ArrayList<PondCard> pondPlaces;
+    public String[] aimPlaces;
 
     public Pond(){
-
+        this.pondPlaces = new ArrayList<>();
+        this.aimPlaces = new String[]{"Not aimed at", "Not aimed at", "Not aimed at",
+                "Not aimed at", "Not aimed at", "Not aimed at"};
     }
 
 

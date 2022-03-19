@@ -3,7 +3,7 @@ package sk.stuba.fei.uim.oop;
 import java.util.Collections;
 
 public class DuckDanceCard extends ActionCard{
-    private String name;
+    private final String name;
 
     public DuckDanceCard(){
         this.name = "Duck dance card";
