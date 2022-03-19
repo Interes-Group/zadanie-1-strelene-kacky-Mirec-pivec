@@ -27,8 +27,8 @@ public class Player {
         }
         DuckMarchCard duckMarch = new DuckMarchCard();
         cards.add(duckMarch);
-        DuckDanceCard duckDanceCard = new DuckDanceCard();
-        cards.add(duckDanceCard);
+        TurboDuck turbo = new TurboDuck();
+        cards.add(turbo);
     }
 
     public void printPlayersState(){

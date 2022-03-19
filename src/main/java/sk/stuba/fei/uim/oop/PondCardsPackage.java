@@ -34,10 +34,10 @@ public class PondCardsPackage {
     }
 
     public PondCard cardOnTop(){
-        return cardsPackage.get(cardsPackage.size() - 1);
+        return cardsPackage.get(0);
     }
 
     public void removeCardOnTop(){
-        cardsPackage.remove(cardsPackage.size() - 1);
+        cardsPackage.remove(0);
     }
 }

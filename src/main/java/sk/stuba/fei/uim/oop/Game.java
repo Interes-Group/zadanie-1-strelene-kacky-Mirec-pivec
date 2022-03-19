@@ -23,7 +23,7 @@ public class Game {
         Collections.shuffle(this.table.getPondPackage().getCardsPackage());
         table.getBoard().initializePondPlaces(this.table.getPondPackage());
         table.getBoard().printBoard();
-        players[0].useCard(2,table);
+        players[0].useCard(1,table);
         System.out.println("---------------------------------");
         table.getBoard().printBoard();
 

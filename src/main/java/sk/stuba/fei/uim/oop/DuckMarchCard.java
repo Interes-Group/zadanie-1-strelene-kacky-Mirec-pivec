@@ -11,11 +11,14 @@ public class DuckMarchCard extends ActionCard {
 
     @Override
     public void action(GameTable table) {
+        table.getPondPackage().getCardsPackage().add(table.getBoard().pondPlaces.get(0));
         for (int pondPlaceIndex = 5; pondPlaceIndex > 0; pondPlaceIndex--) {
             PondCard tmp = table.getBoard().pondPlaces.get(pondPlaceIndex - 1);
             table.getBoard().pondPlaces.set(pondPlaceIndex - 1, table.getBoard().pondPlaces.get(5));
             table.getBoard().pondPlaces.set(5, tmp);
         }
+        table.getBoard().pondPlaces.set(5, table.getPondPackage().cardOnTop());
+        table.getPondPackage().removeCardOnTop();
     }
 
     @Override
