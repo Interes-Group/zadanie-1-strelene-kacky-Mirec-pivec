@@ -18,11 +18,13 @@ public class TurboDuck extends ActionCard {
             indexofChosen = ZKlavesnice.readInt("Insert number between 1-6 please");
         }
         //PondCard tmp = table.getBoard().pondPlaces.get(0);
-        for (int counter = 0; counter < indexofChosen - 1; counter++) {
-            PondCard tmp = table.getBoard().pondPlaces.get(0);
-            table.getBoard().pondPlaces.set(0,table.getBoard().pondPlaces.get(counter + 1));
-            table.getBoard().pondPlaces.set(counter + 1, tmp);
-        }
+//        for (int counter = 0; counter < indexofChosen - 1; counter++) {
+//            PondCard tmp = table.getBoard().pondPlaces.get(0);
+//            table.getBoard().pondPlaces.set(0,table.getBoard().pondPlaces.get(counter + 1));
+//            table.getBoard().pondPlaces.set(counter + 1, tmp);
+//        }
+        PondCard temporary = table.getBoard().pondPlaces.remove(indexofChosen - 1);
+        table.getBoard().pondPlaces.add(0, temporary);
     }
 
     @Override

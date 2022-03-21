@@ -11,4 +11,6 @@ public abstract class PondCard {
     public abstract String printPondCard();
 
     public abstract void wasShot();
+
+    public abstract void turboDuckAction(GameTable table);
 }

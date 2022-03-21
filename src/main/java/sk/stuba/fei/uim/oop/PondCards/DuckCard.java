@@ -42,5 +42,10 @@ public class DuckCard extends PondCard {
         //teraz este dajako vyriesit posun kariet
     }
 
+    @Override
+    public void turboDuckAction(GameTable table) {
+
+    }
+
 
 }
