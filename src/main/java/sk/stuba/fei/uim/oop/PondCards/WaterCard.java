@@ -17,9 +17,9 @@ public class WaterCard extends PondCard {
     }
 
     @Override
-    public void turboDuckAction(GameTable table) {
-        int newIndex = ZKlavesnice.readInt("Can't use turboduck on water choose again");
-        table.getBoard().pondPlaces.get(newIndex - 1).turboDuckAction(table);
+    public void turboDuckAction(GameTable table, int chosenSpot) {
+        int newSpot = ZKlavesnice.readInt("Can't use turboduck on water choose again");
+        table.getBoard().pondPlaces.get(newSpot - 1).turboDuckAction(table, newSpot - 1);
 
     }
 

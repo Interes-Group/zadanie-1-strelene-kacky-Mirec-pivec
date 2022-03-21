@@ -43,8 +43,10 @@ public class DuckCard extends PondCard {
     }
 
     @Override
-    public void turboDuckAction(GameTable table) {
-
+    public void turboDuckAction(GameTable table, int chosenSpot) {
+        PondCard temporary = table.getBoard().pondPlaces.get(chosenSpot);
+        table.getBoard().pondPlaces.remove(chosenSpot);
+        table.getBoard().pondPlaces.add(0, temporary);
     }
 
 

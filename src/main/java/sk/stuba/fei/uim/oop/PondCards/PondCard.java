@@ -12,5 +12,5 @@ public abstract class PondCard {
 
     public abstract void wasShot();
 
-    public abstract void turboDuckAction(GameTable table);
+    public abstract void turboDuckAction(GameTable table, int chosenSpot);
 }
