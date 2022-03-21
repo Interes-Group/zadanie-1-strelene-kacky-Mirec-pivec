@@ -1,6 +1,7 @@
-package sk.stuba.fei.uim.oop;
+package sk.stuba.fei.uim.oop.ActionCards;
 
 import sk.stuba.fei.uim.oop.ActionCards.ActionCard;
+import sk.stuba.fei.uim.oop.GameTable;
 
 import java.util.Collections;
 

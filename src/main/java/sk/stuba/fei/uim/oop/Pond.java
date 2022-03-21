@@ -5,6 +5,7 @@ import sk.stuba.fei.uim.oop.PondCards.PondCard;
 import java.util.ArrayList;
 
 public class Pond {
+    // asi dat obidve private
     public ArrayList<PondCard> pondPlaces;
     public String[] aimPlaces;
 
@@ -36,4 +37,5 @@ public class Pond {
         }
         return true;
     }
+
 }
