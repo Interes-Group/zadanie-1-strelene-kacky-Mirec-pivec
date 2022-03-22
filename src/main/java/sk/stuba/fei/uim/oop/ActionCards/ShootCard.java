@@ -6,6 +6,10 @@ import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 public class ShootCard extends ActionCard {
     private String name;
 
+    public ShootCard(){
+        this.name = "Shoot card";
+    }
+
     @Override
     public void action(GameTable table) {
         int chosenPlace = this.idk(table);

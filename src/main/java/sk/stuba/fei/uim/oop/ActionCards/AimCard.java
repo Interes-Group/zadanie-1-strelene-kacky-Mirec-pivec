@@ -7,12 +7,12 @@ public class AimCard extends ActionCard {
     private String name;
 
     public AimCard(){
-        name = "Aim card";
+        this.name = "Aim card";
     }
 
     @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
     @Override

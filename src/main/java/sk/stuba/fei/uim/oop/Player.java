@@ -18,22 +18,17 @@ public class Player {
         this.name = ZKlavesnice.readString("input player's name please");
         this.lives = 5;
         this.cards = new ArrayList<ActionCard>(3);
-        this.generateCards();
     }
 
     public ArrayList<ActionCard> getCards() {
         return this.cards;
     }
 
-    private void generateCards(){
-        for (int i = 0; i < 1 ; i++) {
-            AimCard aim = new AimCard();
-            this.cards.add(aim);
+    public void generateCards(ActionCardsPackage cardsPackage){
+        for (int number = 0; number < 3; number++) {
+            this.cards.add(cardsPackage.getCardsPackage().get(0));
+            cardsPackage.getCardsPackage().remove(0);
         }
-        DuckMarchCard duckMarch = new DuckMarchCard();
-        this.cards.add(duckMarch);
-        TurboDuck turbo = new TurboDuck();
-        this.cards.add(turbo);
     }
 
     public void printPlayersState(){

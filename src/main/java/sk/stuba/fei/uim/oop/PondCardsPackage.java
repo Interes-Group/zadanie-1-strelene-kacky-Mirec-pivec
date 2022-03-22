@@ -21,7 +21,7 @@ public class PondCardsPackage {
         for (int i = 0; i < players.length; i++) {
             generateDucksForPlayer(players[i]);
             PondCard water = new WaterCard();
-            cardsPackage.add(water);
+            this.cardsPackage.add(water);
         }
     }
 
@@ -30,21 +30,21 @@ public class PondCardsPackage {
     }
 
     public ArrayList<PondCard> getCardsPackage() {
-        return cardsPackage;
+        return this.cardsPackage;
     }
 
     public PondCard cardOnTop() {
-        return cardsPackage.get(0);
+        return this.cardsPackage.get(0);
     }
 
     public void removeCardOnTop() {
-        cardsPackage.remove(0);
+        this.cardsPackage.remove(0);
     }
 
     private void generateDucksForPlayer(Player player) {
         for (int j = 0; j < 5; j++) {
             PondCard duck = new DuckCard(player);
-            cardsPackage.add(duck);
+            this.cardsPackage.add(duck);
         }
     }
 }

@@ -13,14 +13,8 @@ public class Game {
 
 
     public Game(){
-        System.out.println("len nech to tu zastane");
         this.prepareGame();
         this.round();
-        //table.getPondPackage().generatePackage(players);
-        //Collections.shuffle(this.table.getPondPackage().getCardsPackage());
-        //table.getBoard().initializePondPlaces(this.table.getPondPackage());
-        //this.table.getBoard().printBoard();
-        //players[0].useCard(1,table);
 
     }
 
@@ -36,17 +30,18 @@ public class Game {
     }
 
     private void prepareGame(){
-        //najprv nainicializovat action karty
-        //potom hracov ale mozno bez kariet
-        //potom hraciu plochu aj s Pond kartami alebo najprv hracov bez kariet potom hraciu plochu
-        //a potom hracom dodat karty
-
         System.out.println("Welcome to my Duck hunt game! Hope you will like it <3");
         System.out.println("Now it's time to choose players: ");
 
         this.inicializePlayers();
         this.table = new GameTable(this.players);
+
+        for (int playerIndex = 0; playerIndex < this.players.length; playerIndex++) {
+            this.players[playerIndex].generateCards(this.table.getActionPackage());
+        }
+
         this.table.getBoard().printBoard();
+
     }
 
     private void round(){
@@ -73,13 +68,15 @@ public class Game {
             //tu napevno napr posledna
             //v casti kde hrac odhra kartu to bude index tej chosen karty.
         }
+
         int chosenCard = ZKlavesnice.readInt("Choose card you would like to play");
+
         while(!player.canPlayThis(player.getCards().get(chosenCard - 1), this.table)){
             chosenCard = ZKlavesnice.readInt("pick another you can't play that one");
         }
-        player.useCard(chosenCard - 1, this.table);
-        //este doriesit remove vylozenej a potiahnutie dalsej ale aj tak este nemam actionCardPackage takze...
 
+        player.useCard(chosenCard - 1, this.table);
+        System.out.println("---------------------------------");
         System.out.println("---------------------------------");
         this.table.getBoard().printBoard();
     }

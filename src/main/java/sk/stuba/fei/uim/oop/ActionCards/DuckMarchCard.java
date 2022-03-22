@@ -25,6 +25,6 @@ public class DuckMarchCard extends ActionCard {
 
     @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 }

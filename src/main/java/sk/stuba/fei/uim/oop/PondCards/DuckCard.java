@@ -23,13 +23,13 @@ public class DuckCard extends PondCard {
         this.name = name;
     }
 
-    public void setOwner(Player player) {
-        this.owner = player;
-    }
+//    public void setOwner(Player player) {
+//        this.owner = player;
+//    }
 
-    public Player getOwner() {
-        return owner;
-    }
+//    public Player getOwner() {
+//        return owner;
+//    }
 
     @Override
     public String printPondCard() {

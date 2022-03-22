@@ -10,7 +10,7 @@ public class Scatter extends ActionCard {
 
     @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
     @Override
