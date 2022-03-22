@@ -1,6 +1,7 @@
 package sk.stuba.fei.uim.oop.PondCards;
 
 import sk.stuba.fei.uim.oop.GameTable;
+import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 
 public abstract class PondCard {
     protected String name;
@@ -14,5 +15,10 @@ public abstract class PondCard {
 
     public abstract void turboDuckAction(GameTable table, int chosenSpot);
 
-    // sem to chce ešte overenie inputu ako v action kartach
+    public int verifyTurboDuck(int chosenSpot){
+        while ((chosenSpot < 1) || (chosenSpot > 6)){
+            chosenSpot = ZKlavesnice.readInt("please insert number between 1-6");
+        }
+        return chosenSpot;
+    }
 }

@@ -10,12 +10,9 @@ public class Game {
     private Player[] players;
     private GameTable table;
 
-
-
     public Game(){
         this.prepareGame();
         this.round();
-
     }
 
     private void inicializePlayers(){
@@ -47,7 +44,6 @@ public class Game {
     private void round(){
         for (int playerNumber = 0; playerNumber < this.players.length; playerNumber++) {
             this.playerTurn(this.players[playerNumber]);
-
         }
     }
 
@@ -64,9 +60,6 @@ public class Game {
         if (player.hasNothingToPlay(this.table)){
             System.out.println(player.getName() + "has nothing to play, throw card and take another");
             // nejako doriesit vymenu karty idealne cez metodu hraca zahodit + potiahnut novu.
-            //mozno metoda kde jeden atribut budu action cards a druhy bude index zahodenej
-            //tu napevno napr posledna
-            //v casti kde hrac odhra kartu to bude index tej chosen karty.
         }
 
         int chosenCard = ZKlavesnice.readInt("Choose card you would like to play");
@@ -79,5 +72,7 @@ public class Game {
         System.out.println("---------------------------------");
         System.out.println("---------------------------------");
         this.table.getBoard().printBoard();
+        //pozriet sa ci ostal jediny zivy nejkou metodou
+        //pokial hej tak iba ten kto prave zahral moze byt vitaz
     }
 }

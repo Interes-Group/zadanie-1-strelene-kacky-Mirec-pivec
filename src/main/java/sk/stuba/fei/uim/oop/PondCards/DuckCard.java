@@ -53,14 +53,4 @@ public class DuckCard extends PondCard {
         table.getBoard().pondPlaces.add(0, temporary);
 
     }
-
-    private int verifyTurboDuck(int chosenSpot){
-       while ((chosenSpot < 1) || (chosenSpot > 6)){
-           chosenSpot = ZKlavesnice.readInt("please insert number between 1-6");
-       }
-       return chosenSpot;
-    }
-
-
-
 }

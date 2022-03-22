@@ -13,8 +13,8 @@ public class TurboDuck extends ActionCard {
 
     @Override
     public void action(GameTable table) {
-        //int chosenSpot = ZKlavesnice.readInt("Insert place of duck you want to move please");
-        int chosenSpot = super.verifyOthers();
+        int chosenSpot = ZKlavesnice.readInt("Insert place of duck you want to move please");
+        //int chosenSpot = super.verifyOthers();
         table.getBoard().pondPlaces.get(chosenSpot - 1).turboDuckAction(table, chosenSpot);
     }
 
