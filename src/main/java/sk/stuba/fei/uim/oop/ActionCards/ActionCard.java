@@ -5,7 +5,7 @@ import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 
 public abstract class ActionCard {
 
-    public ActionCard(){
+    public ActionCard() {
 
     }
 
@@ -15,13 +15,22 @@ public abstract class ActionCard {
 
     public abstract String getName();
 
-    public int verifyAimInput(GameTable table, int aimedSpot){
-        //aimedSpot--;
-        while ((aimedSpot < 1) || (aimedSpot > 6)
-                || (table.getBoard().aimPlaces[aimedSpot - 1].equals("Aimed at"))){
+    public int verifyAim(GameTable table,/* int aimedSpot,*/ String idk) {
+        int chosenPlace = ZKlavesnice.readInt("choose place you want to shoot");
+        while ((chosenPlace < 1) || (chosenPlace > 6)
+                || (table.getBoard().aimPlaces[chosenPlace - 1].equals(idk))) {
             System.out.println("incorrect input");
-            aimedSpot = ZKlavesnice.readInt("please try again");
+            chosenPlace = ZKlavesnice.readInt("please try again");
         }
-        return aimedSpot;
+        return chosenPlace;
+    }
+
+    public int verifyOthers(/*GameTable table, int place*/){
+        int place = ZKlavesnice.readInt("insert number");
+        while((place < 1) || (place > 6)){
+            System.out.println("incorrect input");
+            place = ZKlavesnice.readInt("please try again");
+        }
+        return place;
     }
 }

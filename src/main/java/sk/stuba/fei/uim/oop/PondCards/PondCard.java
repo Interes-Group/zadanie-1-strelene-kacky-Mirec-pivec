@@ -10,7 +10,9 @@ public abstract class PondCard {
 
     public abstract String printPondCard();
 
-    public abstract void wasShot();
+    public abstract void wasShot(GameTable table, int chosenPlace);
 
     public abstract void turboDuckAction(GameTable table, int chosenSpot);
+
+    // sem to chce ešte overenie inputu ako v action kartach
 }

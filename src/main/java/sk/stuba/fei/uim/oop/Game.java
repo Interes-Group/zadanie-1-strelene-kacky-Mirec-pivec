@@ -68,14 +68,15 @@ public class Game {
 
         if (player.hasNothingToPlay(this.table)){
             System.out.println(player.getName() + "has nothing to play, throw card and take another");
-            //len kontrola ci to aspon pojde
+            // nejako doriesit vymenu karty idealne cez metodu hraca zahodit + potiahnut novu.
+            //mozno metoda kde jeden atribut budu action cards a druhy bude index zahodenej
+            //tu napevno napr posledna
+            //v casti kde hrac odhra kartu to bude index tej chosen karty.
         }
         int chosenCard = ZKlavesnice.readInt("Choose card you would like to play");
-        //System.out.println("kontrolny vypic pouzil si kartu:" + player.getCards().get(chosenCard - 1).getName());
         while(!player.canPlayThis(player.getCards().get(chosenCard - 1), this.table)){
             chosenCard = ZKlavesnice.readInt("pick another you can't play that one");
         }
-
         player.useCard(chosenCard - 1, this.table);
         //este doriesit remove vylozenej a potiahnutie dalsej ale aj tak este nemam actionCardPackage takze...
 

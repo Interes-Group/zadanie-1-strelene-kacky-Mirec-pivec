@@ -17,8 +17,7 @@ public class AimCard extends ActionCard {
 
     @Override
     public void action(GameTable table) {
-        int targetedPlace = ZKlavesnice.readInt("Choose place you want to put card Aim on");
-        targetedPlace = this.verifyAimInput(table, targetedPlace);
+        int targetedPlace = super.verifyAim(table, "Aimed at");
         table.getBoard().aimPlaces[targetedPlace - 1] = "Aimed at";
     }
 
