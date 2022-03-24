@@ -6,6 +6,10 @@ import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 public class WildBillCard extends ShootCard {
     private String name;
 
+    public WildBillCard(){
+        this.name = "Wild Bill card";
+    }
+
     @Override
     public void action(GameTable table) {
         super.action(table);

@@ -20,9 +20,8 @@ public class PondCardsPackage {
     public void generatePackage(Player[] players) {
         for (int i = 0; i < players.length; i++) {
             generateDucksForPlayer(players[i]);
-            PondCard water = new WaterCard();
-            this.cardsPackage.add(water);
         }
+        generateWater();
     }
 
     public void addCardsFromPond(GameTable table) {
@@ -45,6 +44,13 @@ public class PondCardsPackage {
         for (int j = 0; j < 5; j++) {
             PondCard duck = new DuckCard(player);
             this.cardsPackage.add(duck);
+        }
+    }
+
+    private void generateWater(){
+        for (int j = 0; j < 5; j++){
+            PondCard water = new WaterCard();
+            this.cardsPackage.add(water);
         }
     }
 }

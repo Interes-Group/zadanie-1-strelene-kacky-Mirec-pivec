@@ -91,7 +91,7 @@ public class Player {
     }
 
     public void died(GameTable table){
-        for (int card = 0; card < 3;card++){
+        for (int card = 0;  card < this.cards.size(); card++){
             table.getActionPackage().getCardsPackage().add(this.cards.get(0));
             this.cards.remove(0);
         }

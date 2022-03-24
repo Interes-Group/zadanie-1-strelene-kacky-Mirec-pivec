@@ -16,7 +16,7 @@ public abstract class ActionCard {
     public abstract String getName();
 
     public int verifyAim(GameTable table,/* int aimedSpot,*/ String idk) {
-        int chosenPlace = ZKlavesnice.readInt("choose place you want to shoot");
+        int chosenPlace = ZKlavesnice.readInt("choose place you want to target");
         while ((chosenPlace < 1) || (chosenPlace > 6)
                 || (table.getBoard().aimPlaces[chosenPlace - 1].equals(idk))) {
             System.out.println("incorrect input");

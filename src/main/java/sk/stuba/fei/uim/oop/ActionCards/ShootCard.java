@@ -33,7 +33,7 @@ public class ShootCard extends ActionCard {
     }
 
     protected int idk(GameTable table){
-        int chosenPlace = super.verifyAim(table, "Aimed at");
+        int chosenPlace = super.verifyAim(table, "Not aimed at");
         return chosenPlace;
     }
 }

@@ -13,7 +13,7 @@ public class Game {
 
     public Game(){
         this.prepareGame();
-        while(this.winner != null) {
+        while(this.winner == null) {
             this.round();
         }
         System.out.println("Winner is: " + this.winner.getName() + "!!!");
@@ -23,7 +23,7 @@ public class Game {
     private void inicializePlayers(){
         int number = ZKlavesnice.readInt("please insert number of players");
         while ((number < 2) || (number > 6)){
-            number = ZKlavesnice.readInt("insert number between 1-6, please try again");
+            number = ZKlavesnice.readInt("insert number between 2-6, please try again");
         }
         this.players = new Player[number];
         for(int i =0; i < this.players.length; i++){
@@ -62,6 +62,15 @@ public class Game {
         return counter;
     }
 
+    private void getWinner(Player[] players){
+        for (int playerNum = 0; playerNum < players.length; playerNum++){
+            if (!players[playerNum].isDead()){
+                this.winner = players[playerNum];
+                return;
+            }
+        }
+    }
+
     private void playerTurn(Player player){
         if (player.isDead()){
             return;
@@ -76,12 +85,15 @@ public class Game {
             System.out.println(player.getName() + "has nothing to play, throw card and take another");
             player.skipRound(this.table);
             System.out.println("Turn of player "+ player.getName() + "was skipped");
+            this.table.getBoard().printBoard();
+            System.out.println("---------------------------------");
+            System.out.println("---------------------------------");
             return;
         }
 
         int chosenCard = ZKlavesnice.readInt("Choose card you would like to play");
 
-        while(!player.canPlayThis(player.getCards().get(chosenCard - 1), this.table)){
+        while((chosenCard < 1) || (chosenCard > 3) || (!player.canPlayThis(player.getCards().get(chosenCard - 1), this.table))){
             chosenCard = ZKlavesnice.readInt("pick another you can't play that one");
         }
 
@@ -92,7 +104,7 @@ public class Game {
 
         int checkWinner = this.numOfAlivePlayers(this.players);
         if (checkWinner == 1){
-            this.winner = player;
+            getWinner(this.players);
         }
     }
 }
