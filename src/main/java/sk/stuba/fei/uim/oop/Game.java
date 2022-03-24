@@ -9,10 +9,15 @@ import java.util.Collections;
 public class Game {
     private Player[] players;
     private GameTable table;
+    private Player winner;
 
     public Game(){
         this.prepareGame();
-        this.round();
+        while(this.winner != null) {
+            this.round();
+        }
+        System.out.println("Winner is: " + this.winner.getName() + "!!!");
+        System.out.println("COUNGRATULATION");
     }
 
     private void inicializePlayers(){
@@ -47,6 +52,16 @@ public class Game {
         }
     }
 
+    private int numOfAlivePlayers(Player[] players){
+        int counter = 0;
+        for (int index = 0; index < players.length; index++) {
+            if (!players[index].isDead()){
+                counter++;
+            }
+        }
+        return counter;
+    }
+
     private void playerTurn(Player player){
         if (player.isDead()){
             return;
@@ -59,7 +74,9 @@ public class Game {
 
         if (player.hasNothingToPlay(this.table)){
             System.out.println(player.getName() + "has nothing to play, throw card and take another");
-            // nejako doriesit vymenu karty idealne cez metodu hraca zahodit + potiahnut novu.
+            player.skipRound(this.table);
+            System.out.println("Turn of player "+ player.getName() + "was skipped");
+            return;
         }
 
         int chosenCard = ZKlavesnice.readInt("Choose card you would like to play");
@@ -72,7 +89,10 @@ public class Game {
         System.out.println("---------------------------------");
         System.out.println("---------------------------------");
         this.table.getBoard().printBoard();
-        //pozriet sa ci ostal jediny zivy nejkou metodou
-        //pokial hej tak iba ten kto prave zahral moze byt vitaz
+
+        int checkWinner = this.numOfAlivePlayers(this.players);
+        if (checkWinner == 1){
+            this.winner = player;
+        }
     }
 }

@@ -25,7 +25,7 @@ public abstract class ActionCard {
         return chosenPlace;
     }
 
-    public int verifyOthers(/*GameTable table, int place*/){
+    public int verifyOthers(){
         int place = ZKlavesnice.readInt("insert number");
         while((place < 1) || (place > 6)){
             System.out.println("incorrect input");

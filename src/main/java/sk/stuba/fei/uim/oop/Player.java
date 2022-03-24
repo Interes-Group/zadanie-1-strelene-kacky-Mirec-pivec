@@ -46,15 +46,28 @@ public class Player {
         return this.name;
     }
 
-    public void duckShot(){
+    public void duckShot(GameTable table){
         this.lives--;
+        if (this.isDead()){
+            this.died(table);
+        }
     }
 
     public void useCard(int indexOfCard,GameTable table){
         this.cards.get(indexOfCard).action(table);
         System.out.println(this.name + " used card " + this.cards.get(indexOfCard).getName());
-        //tu potom vymazat kartu cez remove
-        // asi budem musiet passovat aj hracov
+        table.getActionPackage().getCardsPackage().add(this.cards.get(indexOfCard));
+        this.cards.remove(indexOfCard);
+
+        //potiahni si kartu z vrchu balicka
+        this.cards.add(table.getActionPackage().getCardsPackage().get(0));
+        table.getActionPackage().getCardsPackage().remove(0);
+    }
+
+    public void skipRound(GameTable table){
+        this.cards.remove(2);
+        this.cards.add(table.getActionPackage().getCardsPackage().get(0));
+        table.getActionPackage().getCardsPackage().remove(0);
     }
 
     public boolean isDead(){
@@ -77,4 +90,10 @@ public class Player {
         return false;
     }
 
+    public void died(GameTable table){
+        for (int card = 0; card < 3;card++){
+            table.getActionPackage().getCardsPackage().add(this.cards.get(0));
+            this.cards.remove(0);
+        }
+    }
 }

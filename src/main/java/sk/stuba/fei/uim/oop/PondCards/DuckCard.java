@@ -23,13 +23,6 @@ public class DuckCard extends PondCard {
         this.name = name;
     }
 
-//    public void setOwner(Player player) {
-//        this.owner = player;
-//    }
-
-//    public Player getOwner() {
-//        return owner;
-//    }
 
     @Override
     public String printPondCard() {
@@ -39,10 +32,11 @@ public class DuckCard extends PondCard {
     @Override
     public void wasShot(GameTable table, int chosenPlace) {
         System.out.println("You shot duck of player" + this.owner.getName());
-        this.owner.duckShot();
+        this.owner.duckShot(table);
         table.getBoard().pondPlaces.remove(chosenPlace - 1);
         table.getBoard().aimPlaces[chosenPlace - 1] = "Not aimed at";
         table.getBoard().pondPlaces.add(table.getPondPackage().cardOnTop());
+        table.getPondPackage().removeCardOnTop();
     }
 
     @Override

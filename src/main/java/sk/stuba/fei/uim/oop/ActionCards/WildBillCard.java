@@ -12,7 +12,7 @@ public class WildBillCard extends ShootCard {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public boolean canBePlayed(GameTable table) {
