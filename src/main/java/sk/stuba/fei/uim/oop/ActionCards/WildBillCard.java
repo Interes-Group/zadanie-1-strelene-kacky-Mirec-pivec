@@ -24,7 +24,7 @@ public class WildBillCard extends ShootCard {
     }
 
     @Override
-    protected int idk(GameTable table){
+    protected int verify(GameTable table){
         return super.verifyOthers();
     }
 }

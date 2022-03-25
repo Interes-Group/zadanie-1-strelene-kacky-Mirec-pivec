@@ -77,6 +77,7 @@ public class Game {
         }
         System.out.println("----------------------------------------");
         System.out.println(player.getName() + " is on turn");
+        player.printPlayersState();
         System.out.println("----------------------------------------");
         System.out.println(player.getName() + " has cards: ");
         player.printCards(player.getCards());
@@ -108,4 +109,3 @@ public class Game {
         }
     }
 }
-//skuska pre push commit

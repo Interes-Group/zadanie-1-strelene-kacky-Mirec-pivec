@@ -12,7 +12,7 @@ public class ShootCard extends ActionCard {
 
     @Override
     public void action(GameTable table) {
-        int chosenPlace = this.idk(table);
+        int chosenPlace = this.verify(table);
         table.getBoard().pondPlaces.get(chosenPlace - 1).wasShot(table, chosenPlace);
         table.getBoard().aimPlaces[chosenPlace - 1] = "Not aimed at";
     }
@@ -32,7 +32,7 @@ public class ShootCard extends ActionCard {
         return this.name;
     }
 
-    protected int idk(GameTable table){
+    protected int verify(GameTable table){
         int chosenPlace = super.verifyAim(table, "Not aimed at");
         return chosenPlace;
     }

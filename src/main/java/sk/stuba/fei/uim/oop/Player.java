@@ -32,8 +32,8 @@ public class Player {
     }
 
     public void printPlayersState(){
-        System.out.println("players name " + this.name);
-        System.out.println("has " + this.lives + " lives left");
+        System.out.println("players name " + this.name + "has " + this.lives + " lives left");
+
     }
 
     public void printCards(ArrayList<ActionCard> cards){

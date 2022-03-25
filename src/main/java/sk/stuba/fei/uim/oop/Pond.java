@@ -5,7 +5,6 @@ import sk.stuba.fei.uim.oop.PondCards.PondCard;
 import java.util.ArrayList;
 
 public class Pond {
-    // asi dat obidve private
     public ArrayList<PondCard> pondPlaces;
     public String[] aimPlaces;
 
@@ -14,7 +13,6 @@ public class Pond {
         this.aimPlaces = new String[]{"Not aimed at", "Not aimed at", "Not aimed at",
                 "Not aimed at", "Not aimed at", "Not aimed at"};
     }
-
 
     public void initializePondPlaces(PondCardsPackage pondPackage){
         for (int counter = 0; counter < 6; counter++) {

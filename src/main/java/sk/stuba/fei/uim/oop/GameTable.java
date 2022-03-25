@@ -12,7 +12,6 @@ public class GameTable {
         this.actionPackage = new ActionCardsPackage();
     }
 
-
     public PondCardsPackage getPondPackage() {
         return this.pondPackage;
     }

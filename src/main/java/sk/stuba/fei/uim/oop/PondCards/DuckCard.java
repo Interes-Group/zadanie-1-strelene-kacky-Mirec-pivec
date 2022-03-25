@@ -6,8 +6,7 @@ import sk.stuba.fei.uim.oop.utility.ZKlavesnice;
 
 public class DuckCard extends PondCard {
     private String name = "Duck";
-    private Player owner; // prerob ownera na objekt hraca ty jebek
-
+    private Player owner;
 
    public DuckCard(Player player)
    {
@@ -22,7 +21,6 @@ public class DuckCard extends PondCard {
     public void setName(String name) {
         this.name = name;
     }
-
 
     @Override
     public String printPondCard() {
